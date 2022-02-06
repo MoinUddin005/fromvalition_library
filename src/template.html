@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form-1">
+      
+    <div>
+    
+      <input type="text" name="first-name" placeholder="firstname" />
+    </div>
+    <div>
+      <small id="first-name"></small>
+    </div>
+    
+    <div>
+      
+      <input type="text" name="last-name" placeholder="last name " />
+    </div>
+    <div>
+      <small id="last-name"></small>
+    </div>
+
+    <div>
+     
+      <input type="text" name="my-email" placeholder="email" />
+    </div>
+    <div>
+      <small id="my-email"></small>
+    </div>
+
+    <div>
+      
+      <input type="password" name="my-pass" placeholder="password" />
+    </div>
+    <div>
+      <small id="my-pass"></small>
+    </div>
+
+    <div>
+     
+      <input type="url" name="url" placeholder="url" />
+    </div>
+    <div>
+      <small id="url"></small>
+    </div>
+
+    <div>
+      
+      <input type="text" name="phone" placeholder="phone" />
+    </div>
+    <div>
+      <small id="phone"></small>
+    </div>
+      
+     <input type="submit" value="submit" />
+
+    
+   
+   
+    </form>
+
+
+
+
+
+
+    
+    <script src="../build/main.bundle.js"></script>
+
+    
+<script>
+      new testLibrary.default(document.getElementById("form-1") ,{
+        "first-name": { minLength: 3, nonNumeric: true },
+        "last-name": { minLength: 4, nonNumeric: true },
+        "my-email": { minLength: 5, maxLength:20},
+        "my-pass":{hasUpperCase: true, hasLowerCase: true, hasSpecialSymbol: true, hasNumeric: true, minLength: 4},
+        "phone": { minLength: 11, maxLength: 12 },
+        'url': { hasHttps: true }
+      });
+
+      </script>
+  </body>
+</html>
